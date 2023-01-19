@@ -7,7 +7,7 @@ import { getBaseAppleThemeIOS } from './appleTheme.ios';
 export function createAppleTheme(): ThemeReference {
   const appleThemeReference = new ThemeReference({} as Theme, () => {
     const isLightMode = Appearance.getColorScheme() === 'light';
-    const isCompact = NativeAppearanceAdditions.horizontalSizeCategory() === 'compact';
+    const isCompact = NativeAppearanceAdditions.horizontalSizeClass() === 'compact';
     console.log('isCompact: ' + isCompact);
     return getBaseAppleThemeIOS(isLightMode, isCompact);
   });
@@ -24,12 +24,6 @@ export function createAppleTheme(): ThemeReference {
     }
     appleThemeReference.invalidate();
   });
-
-  // NativeAppearanceAdditions.addListener('appearanceChanged');
-
-  // NativeAppearanceAdditions.addListener('appearanceChanged', () => {
-  //   appleThemeReference.invalidate();
-  // });
 
   return appleThemeReference;
 }

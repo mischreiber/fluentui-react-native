@@ -1,35 +1,23 @@
-// import { NativeEventEmitter } from 'react-native';
-// import NativeFontMetrics from './NativeFontMetrics';
-// import { FontMetrics, ScaleFactors } from './NativeFontMetrics.types';
 import { NativeEventEmitter } from 'react-native';
 import NativeAppearanceAdditions from './NativeAppearanceAdditions.ios';
-import { IAppearanceAdditions, SizeCategory } from './NativeAppearanceAdditions.types';
-
-// class FontMetricsImpl implements FontMetrics {
-//   _scaleFactors: ScaleFactors;
-
-//   constructor() {
-//     if (NativeFontMetrics) {
-//       this._scaleFactors = NativeFontMetrics.currentScaleFactors();
-//       const eventEmitter = new NativeEventEmitter(NativeFontMetrics as any);
-//       eventEmitter.addListener('onFontMetricsChanged', ({ newScaleFactors }) => {
-//         this._scaleFactors = newScaleFactors;
-//       });
-//     } else {
-//       this._scaleFactors = {};
-//     }
-//   }
-
-//   get scaleFactors(): ScaleFactors {
-//     return this._scaleFactors;
-//   }
-// }
+import {
+  HorizontalSizeClassKey,
+  IAppearanceAdditions,
+  SizeCategory,
+  UserInterfaceLevel,
+  UserInterfaceLevelKey,
+} from './NativeAppearanceAdditions.types';
 
 class AppearanceAdditionsImpl implements IAppearanceAdditions {
-  _horizontalSizeCategory: SizeCategory;
+  _horizontalSizeClass: SizeCategory;
+  _userInterfaceLevel: UserInterfaceLevel;
 
-  get horizontalSizeCategory(): SizeCategory {
-    return this._horizontalSizeCategory;
+  get horizontalSizeClass(): SizeCategory {
+    return this._horizontalSizeClass;
+  }
+
+  get userInterfaceLevel(): UserInterfaceLevel {
+    return this._userInterfaceLevel;
   }
 
   constructor() {
@@ -38,8 +26,19 @@ class AppearanceAdditionsImpl implements IAppearanceAdditions {
     //   this._scaleFactors = newScaleFactors;
     // });
     const eventEmitter = new NativeEventEmitter(NativeAppearanceAdditions as any);
-    eventEmitter.addListener('appearanceChanged', ({ newSizeClass }) => {
-      this._horizontalSizeCategory = newSizeClass;
+    eventEmitter.addListener('appearanceChanged', (newValue) => {
+      console.log(
+        'Got new events for AppearanceAdditionsImpl: ' +
+          HorizontalSizeClassKey +
+          ' = ' +
+          newValue[HorizontalSizeClassKey] +
+          ', ' +
+          UserInterfaceLevelKey +
+          ' = ' +
+          newValue[UserInterfaceLevelKey],
+      );
+      this._horizontalSizeClass = newValue[HorizontalSizeClassKey];
+      this._userInterfaceLevel = newValue[UserInterfaceLevelKey];
     });
   }
 }
