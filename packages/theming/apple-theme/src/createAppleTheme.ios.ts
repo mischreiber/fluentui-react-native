@@ -7,9 +7,9 @@ import { getBaseAppleThemeIOS } from './appleTheme.ios';
 export function createAppleTheme(): ThemeReference {
   const appleThemeReference = new ThemeReference({} as Theme, () => {
     const isLightMode = Appearance.getColorScheme() === 'light';
-    const isCompact = NativeAppearanceAdditions.horizontalSizeClass() === 'compact';
-    console.log('isCompact: ' + isCompact);
-    return getBaseAppleThemeIOS(isLightMode, isCompact);
+    const isElevated = NativeAppearanceAdditions.userInterfaceLevel() === 'elevated';
+    console.log('isElevated: ' + isElevated);
+    return getBaseAppleThemeIOS(isLightMode, isElevated);
   });
 
   Appearance.addChangeListener(() => {
@@ -18,7 +18,6 @@ export function createAppleTheme(): ThemeReference {
 
   const NotificationManagerEmitter = new NativeEventEmitter(NativeAppearanceAdditions);
   NotificationManagerEmitter.addListener('appearanceChanged', (newValue) => {
-    // console.log('"NativeAppearanceAdditions" just fired: ' + newValue.va);
     for (const prop in newValue) {
       console.log('"NativeAppearanceAdditions" just fired: ' + prop + ' = ' + newValue[prop]);
     }

@@ -1,4 +1,4 @@
-import { SizeCategory } from './NativeAppearanceAdditions.types';
+import { SizeClass, UserInterfaceLevel } from './NativeAppearanceAdditions.types';
 
 export const NativeAppearanceAdditions = {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -7,11 +7,11 @@ export const NativeAppearanceAdditions = {
   removeListeners: (_: number) => {},
   horizontalSizeClass: () => {
     console.warn('NativeAppearanceAdditions is only available on iOS');
-    return 'regular' as SizeCategory;
+    return 'regular' as SizeClass;
   },
   userInterfaceLevel: () => {
     console.warn('NativeAppearanceAdditions is only available on iOS');
-    return 'regular' as SizeCategory;
+    return 'base' as UserInterfaceLevel;
   },
 };
 

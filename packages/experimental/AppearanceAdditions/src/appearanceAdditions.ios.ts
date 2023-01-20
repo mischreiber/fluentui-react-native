@@ -3,16 +3,16 @@ import NativeAppearanceAdditions from './NativeAppearanceAdditions.ios';
 import {
   HorizontalSizeClassKey,
   IAppearanceAdditions,
-  SizeCategory,
+  SizeClass,
   UserInterfaceLevel,
   UserInterfaceLevelKey,
 } from './NativeAppearanceAdditions.types';
 
 class AppearanceAdditionsImpl implements IAppearanceAdditions {
-  _horizontalSizeClass: SizeCategory;
+  _horizontalSizeClass: SizeClass;
   _userInterfaceLevel: UserInterfaceLevel;
 
-  get horizontalSizeClass(): SizeCategory {
+  get horizontalSizeClass(): SizeClass {
     return this._horizontalSizeClass;
   }
 

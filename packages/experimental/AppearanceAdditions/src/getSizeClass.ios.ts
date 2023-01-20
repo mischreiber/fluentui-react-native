@@ -4,11 +4,11 @@ import { useSubscription } from 'use-subscription';
 import { appearanceAdditions } from './appearanceAdditions';
 
 import NativeAppearanceAdditions from './NativeAppearanceAdditions';
-import { SizeCategory } from './NativeAppearanceAdditions.types';
+import { SizeClass } from './NativeAppearanceAdditions.types';
 
 const eventEmitter = NativeAppearanceAdditions ? new NativeEventEmitter(NativeAppearanceAdditions as any) : undefined;
 
-export function getHorizontalSizeClass(): SizeCategory {
+export function useHorizontalSizeClass(): SizeClass {
   if (!eventEmitter) {
     return 'regular';
   }
