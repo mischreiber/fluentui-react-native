@@ -1,6 +1,6 @@
-import { NativeModules } from 'react-native';
+import { ensureNativeComponent } from '@fluentui-react-native/component-cache';
 
-export const NativeAppearanceAdditions = NativeModules.FRNAppearanceAdditions;
+export const NativeAppearanceAdditions = ensureNativeComponent('FRNAppearanceAdditions');
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface NativeAppearanceAdditionsInterface {}
