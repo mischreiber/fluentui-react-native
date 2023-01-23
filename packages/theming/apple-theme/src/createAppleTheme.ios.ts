@@ -7,9 +7,8 @@ import { getBaseAppleThemeIOS } from './appleTheme.ios';
 export function createAppleTheme(): ThemeReference {
   const appleThemeReference = new ThemeReference({} as Theme, () => {
     const isLightMode = Appearance.getColorScheme() === 'light';
-    console.log('isLightMode: ' + isLightMode);
     const isElevated = NativeAppearanceAdditions.userInterfaceLevel() === 'elevated';
-    console.log('isElevated: ' + isElevated);
+    console.log('requesting getBaseAppleThemeIOS using isLightMode === ' + isLightMode + ', isElevated === ' + isElevated);
     return getBaseAppleThemeIOS(isLightMode, isElevated);
   });
 

@@ -128,6 +128,7 @@ const appleComponents = {
 };
 
 export function getBaseAppleThemeIOS(isLightMode: boolean, isElevated: boolean): Theme {
+  console.log('got into getBaseAppleThemeIOS using isLightMode === ' + isLightMode + ', isElevated === ' + isElevated);
   return {
     colors: paletteFromAppleColors(isLightMode, isElevated),
     typography: appleTypography(),
