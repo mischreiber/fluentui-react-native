@@ -40,7 +40,7 @@ export const Notification = compose<NotificationType>({
     const Slots = useSlots(userProps, (layer) => notificationLookup(layer, userProps));
     const isBar = ['primaryOutlineBar', 'primaryBar', 'neutralBar'].includes(userProps.variant);
     const width = useWindowDimensions().width / 2;
-    const sizeClass = useHorizontalSizeClass(); //useSizeClassIOS_DO_NOT_USE();
+    const sizeClass = useHorizontalSizeClass();
     const onActionPress = userProps.onActionPress;
 
     const rootStyle = getRootStyle(isBar, width, sizeClass);
