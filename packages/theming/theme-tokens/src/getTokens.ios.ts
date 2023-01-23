@@ -9,7 +9,7 @@ import { assertNever } from 'assert-never';
 export function getAliasTokens(mode: AppearanceOptions) {
   if (mode === 'light') {
     return iOSLightAliasTokens;
-  } else if (mode === 'dark') {
+  } else if (mode === 'dark' || mode === 'darkElevated') {
     return iOSDarkAliasTokens;
   } else if (mode === 'highContrast') {
     // TODO #2492 we should be throwing an error if highContrast mode is set in iOS, but currently
