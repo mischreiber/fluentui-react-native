@@ -11,10 +11,8 @@ export function getAliasTokens(mode: AppearanceOptions) {
   if (mode === 'light') {
     return iOSLightAliasTokens;
   } else if (mode === 'dark') {
-    console.log('we have a regular dark theme, boooo 💩');
     return iOSDarkAliasTokens;
   } else if (mode === 'darkElevated') {
-    console.log('we have a dark elevated theme, woo 🥳');
     return iOSDarkElevatedAliasTokens;
   } else if (mode === 'highContrast') {
     // TODO #2492 we should be throwing an error if highContrast mode is set in iOS, but currently
