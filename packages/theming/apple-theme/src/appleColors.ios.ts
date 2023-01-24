@@ -216,16 +216,13 @@ function getFluentUIAppleDarkPalette(): ApplePalette {
 
 /** Creates a palette of colors for the apple theme, using the appropriate FluentUI Apple Palette based on appearance */
 export function paletteFromAppleColors(isLightMode: boolean, isElevated: boolean): ThemeColorDefinition {
-  console.log('got into paletteFromAppleColors using isLightMode === ' + isLightMode + ', isElevated === ' + isElevated);
   const fluentApple = isLightMode ? getFluentUIAppleLightPalette() : getFluentUIAppleDarkPalette();
 
   const appearance = Appearance.getColorScheme();
   let mode = getCurrentAppearance(appearance, 'light');
-  console.log('current mode is ' + mode);
   if (mode === 'dark' && isElevated === true) {
     mode = 'darkElevated';
   }
-  console.log('final mode is ' + mode);
 
   return {
     /* Color Alias Tokens */
