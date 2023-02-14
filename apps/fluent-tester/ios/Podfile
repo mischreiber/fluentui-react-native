@@ -24,7 +24,7 @@ use_test_app! do |target|
   target.app do
     platform :ios, '14.0'
 
-    pod 'MicrosoftFluentUI', :git => 'https://github.com/microsoft/fluentui-apple', :commit => '255580b790ef5f09adf71ab9e0671266d87665c1'
+    pod 'MicrosoftFluentUI', :git => 'https://github.com/microsoft/fluentui-apple', :commit => '5e7e29db5795f7133192ecf25a8f2e8f87c4f33e'
 
     # There is a bug where autolinking isn't working, so specify these manually.
     pod 'FRNAppearanceAdditions', :path => '../../../packages/experimental/AppearanceAdditions/FRNAppearanceAdditions.podspec'

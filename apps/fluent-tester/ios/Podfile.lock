@@ -10,9 +10,9 @@ PODS:
     - React-jsi (= 0.68.6)
     - ReactCommon/turbomodule/core (= 0.68.6)
   - fmt (6.2.1)
-  - FRNAppearanceAdditions (0.3.0):
+  - FRNAppearanceAdditions (0.3.1):
     - React
-  - FRNAvatar (0.17.14):
+  - FRNAvatar (0.17.15):
     - MicrosoftFluentUI
     - React
   - FRNDatePicker (0.7.5):
@@ -458,7 +458,7 @@ PODS:
     - React-jsi (= 0.68.6)
     - React-logger (= 0.68.6)
     - React-perflogger (= 0.68.6)
-  - ReactTestApp-DevSupport (2.3.4):
+  - ReactTestApp-DevSupport (2.3.5):
     - React-Core
     - React-jsi
   - ReactTestApp-Resources (1.0.0-dev)
@@ -478,7 +478,7 @@ DEPENDENCIES:
   - FRNDatePicker (from `../../../packages/experimental/NativeDatePicker`)
   - FRNFontMetrics (from `../../../packages/experimental/NativeFontMetrics/FRNFontMetrics.podspec`)
   - glog (from `../../../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - MicrosoftFluentUI (from `https://github.com/microsoft/fluentui-apple`, commit `255580b790ef5f09adf71ab9e0671266d87665c1`)
+  - MicrosoftFluentUI (from `https://github.com/microsoft/fluentui-apple`, commit `5e7e29db5795f7133192ecf25a8f2e8f87c4f33e`)
   - RCT-Folly (from `../../../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../../../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../../../node_modules/react-native/Libraries/TypeSafety`)
@@ -538,7 +538,7 @@ EXTERNAL SOURCES:
   glog:
     :podspec: "../../../node_modules/react-native/third-party-podspecs/glog.podspec"
   MicrosoftFluentUI:
-    :commit: 255580b790ef5f09adf71ab9e0671266d87665c1
+    :commit: 5e7e29db5795f7133192ecf25a8f2e8f87c4f33e
     :git: https://github.com/microsoft/fluentui-apple
   RCT-Folly:
     :podspec: "../../../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
@@ -607,7 +607,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MicrosoftFluentUI:
-    :commit: 255580b790ef5f09adf71ab9e0671266d87665c1
+    :commit: 5e7e29db5795f7133192ecf25a8f2e8f87c4f33e
     :git: https://github.com/microsoft/fluentui-apple
 
 SPEC CHECKSUMS:
@@ -616,8 +616,8 @@ SPEC CHECKSUMS:
   FBLazyVector: 74b042924fe14da854ac4e87cefc417f583b22b1
   FBReactNativeSpec: e783d9621f5f6b3fa7ee812a932ad51852ae42a7
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  FRNAppearanceAdditions: f6208cceab9328849acf5988e05e5db364b2f191
-  FRNAvatar: 33bc4dd6eea4567f29ee9ea8b1076860260c8547
+  FRNAppearanceAdditions: 3b63bdc4a950d2c82c952c93c31296f2b56d7fc9
+  FRNAvatar: c30004244789b3171977652a3e03a7cb354f4786
   FRNDatePicker: eb822dc4d4f86606c81949065c6a9785c5e50f75
   FRNFontMetrics: 381a8bfd71f14b2c4718b5120db5f57455b648a8
   glog: 476ee3e89abb49e07f822b48323c51c57124b572
@@ -649,12 +649,12 @@ SPEC CHECKSUMS:
   React-RCTVibration: be5f18ffc644f96f904e0e673ab639ca5d673ee8
   React-runtimeexecutor: d5498cfb7059bf8397b6416db4777843f3f4c1e7
   ReactCommon: 1974dab5108c79b40199f12a4833d2499b9f6303
-  ReactTestApp-DevSupport: 9248d96d73d2a42b94a6c84b3b7bf838c4c92246
+  ReactTestApp-DevSupport: edff24db2d8381e6f5f98c6d82573bcf638d2b4d
   ReactTestApp-Resources: ecba662266ac5af3e30e1e3004c0fa8c0298b61a
   RNCPicker: 0bf8ef8f7800524f32d2bb2a8bcadd53eda0ecd1
   RNSVG: d7d7bc8229af3842c9cfc3a723c815a52cdd1105
   Yoga: 7929b92b1828675c1bebeb114dae8cb8fa7ef6a3
 
-PODFILE CHECKSUM: 5b853830443e9d0170d0486cc432d5e4eae3dcab
+PODFILE CHECKSUM: 5b65bf7ec15c26cf929abbe3cf0cc43a4ec3c943
 
 COCOAPODS: 1.11.3
